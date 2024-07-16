@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Header.css';
-import logo from "../../Images/Betterbet .png"
+import logo from '../../Images/BetterBet .png'; // Adjust the path as necessary
 import { useNavigate } from 'react-router-dom';
 
 import UserContext from '../Context/UserContext';
 
 
 const Header = () => {
+  // @ts-ignore
   const { username } = useContext(UserContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
