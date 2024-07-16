@@ -19,7 +19,7 @@ const Explain = () => {
         <div className="segment">
           <img src={placeholder} alt="Placeholder" className="image" />
           <div className="text-section">
-            <h2 className='test'>Quality > Quantity</h2>
+            <h2 className='test'>Quality is better Quantity</h2>
             <p className='widthtest2'>BookieBreaker focuses on bookies from all over the UK to bring you the best arbitrage opportunities. We provide significantly more markets than other arbitrage services, at a significantly better price, with our sole aim </p>
           </div>
         </div>
