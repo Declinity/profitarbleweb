@@ -169,6 +169,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                 profitMargin: (profitMargin * 100).toFixed(2),
                 amountOnBetway: amountOnBetway.toFixed(2),
                 amountOnOther: amountOnOther.toFixed(2),
+                /* @ts-ignore */
                 returnOnBetway: returnOnBetway.toFixed(2),
                 returnOnOther: returnOnOther.toFixed(2)
             });
@@ -177,6 +178,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                 profitMargin: '---',
                 amountOnBetway: '---',
                 amountOnOther: '---',
+                /* @ts-ignore */
                 returnOnBetway: '---',
                 returnOnOther: '---'
             });
@@ -226,6 +228,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                         {Object.entries(links).map(([key, value], idx) => {
                             if (key === "BetUK") {
                                 return (
+                                    // @ts-ignore
                                     <button key={idx} className="link-button" onClick={() => toggleBetUKPopup(true, value)}>
                                         {key}
                                     </button>
@@ -233,7 +236,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             }
                             else if (key === "Betfair") {
                                 return (
-                                    // Button to toggle Betfair popup
+                                    // @ts-ignore
                                     <button key={idx} className="link-button" onClick={() => toggleBetfairPopup(true, value)}>
                                         {key}
                                     </button>
@@ -241,7 +244,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             }
                             else if (key === "Lottoland") {
                                 return (
-                                    // Button to toggle Betfair popup
+                                    // @ts-ignore
                                     <button key={idx} className="link-button" onClick={() => toggleLottolandPopup(true, value)}>
                                         {key}
                                     </button>
@@ -249,7 +252,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             }
                             else if (key === "Livescore") {
                                 return (
-                                    // Button to toggle Betfair popup
+                                    // @ts-ignore
                                     <button key={idx} className="link-button" onClick={() => toggleLivescorePopup(true, value)}>
                                         {key}
                                     </button>
@@ -257,7 +260,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             }
                             else if (key === "BetVictor") {
                                 return (
-                                    // Button to toggle Betfair popup
+                                    // @ts-ignore
                                     <button key={idx} className="link-button" onClick={() => toggleBetvictorPopup(true, value)}>
                                         {key}
                                     </button>
@@ -265,6 +268,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             }
                             else {
                                 return (
+                                    // @ts-ignore
                                     <a key={idx} href={value} target="_blank" rel="noopener noreferrer" className="link-button">
                                         {key}
                                     </a>
@@ -283,6 +287,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                                 ) : (
                                     Object.entries(entry).map(([key, value], idx) => (
                                         <div key={idx}>
+                                            {/* @ts-ignore */}
                                             <strong>{key}: </strong>
                                             {value === "Total Cards" ? (
                                                 <span className="highlighted" onClick={() => handleValueClick(value)}>
@@ -535,9 +540,11 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <strong>Profit Margin: </strong>{calculationResult.profitMargin}%
                         </div>
                         <div>
+                            {/* @ts-ignore */}
                             <strong>Bookie 1 Return: </strong>{calculationResult.returnOnBetway}
                         </div>
                         <div>
+                            {/* @ts-ignore */}
                             <strong>Bookie 2 Return: </strong>{calculationResult.returnOnOther}
                         </div>
                         <button onClick={handleOverlaySave}>Save</button>
