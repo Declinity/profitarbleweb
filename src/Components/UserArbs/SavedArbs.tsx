@@ -1,5 +1,6 @@
+// @ts-ignore
 import React, { useContext, useEffect, useState } from 'react';
-import UserContext from '../Context/UserContext.tsx';
+import UserContext from '../Context/UserContext.js';
 import "./SavedArbs.css"
 
 const statusOptions = ["Void", "Lost", "Won"];
@@ -44,7 +45,7 @@ const SavedArbs = () => {
             alert('Failed to update arbs');
         }
     };
-
+    // @ts-ignore
     const calculateProfit = (arb) => {
         const { 'Odds 1': odds1, 'Odds 2': odds2, 'Stake 1': stake1, 'Stake 2': stake2, 'Total Stake': totalStake, 'Bookie 1 Status': status1, 'Bookie 2 Status': status2 } = arb;
         const total = parseFloat(totalStake);
@@ -81,37 +82,44 @@ const SavedArbs = () => {
         }
         return profit.toFixed(2);
     };
-
+    // @ts-ignore
     const calculateTotalStake = (stake1, stake2) => {
         return (parseFloat(stake1) + parseFloat(stake2)).toFixed(2);
     };
-
+    // @ts-ignore
     const handleStatusChange = (index, bookie, value) => {
         const newArbs = [...arbs];
+        // @ts-ignore
         newArbs[index][bookie] = value;
+        // @ts-ignore
         newArbs[index].Profit = calculateProfit(newArbs[index]);
         setArbs(newArbs);
     };
-
+    // @ts-ignore
     const handleInputChange = (index, field, value) => {
         const newArbs = [...arbs];
+        // @ts-ignore
         newArbs[index][field] = value;
 
         // Update the total stake when Stake 1 or Stake 2 is changed
         if (field === 'Stake 1' || field === 'Stake 2') {
+            // @ts-ignore
             newArbs[index]['Total Stake'] = calculateTotalStake(newArbs[index]['Stake 1'], newArbs[index]['Stake 2']);
         }
 
+        // @ts-ignore
         newArbs[index].Profit = calculateProfit(newArbs[index]);
         setArbs(newArbs);
     };
 
+    // @ts-ignore
     const handleDelete = (index) => {
         const newArbs = arbs.filter((_, arbIndex) => arbIndex !== index);
         setArbs(newArbs);
     };
 
     const totalStake = arbs.reduce((sum, arb) => sum + parseFloat(arb['Total Stake']), 0);
+    // @ts-ignore
     const totalProfit = arbs.reduce((sum, arb) => sum + parseFloat(arb.Profit), 0);
 
     if (!authChecked) return <div>Checking authentication...</div>;

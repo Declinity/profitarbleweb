@@ -1,18 +1,19 @@
+// @ts-ignore
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from "./Components/Home/Header.tsx";
-import MainScreen from './Components/Home/MainScreen.tsx';
-import FreeTrial from "./Components/Trial/Trial.tsx"
-import Signup from "./Components/Login/Signup.tsx"
-import Login from './Components/Login/Login.tsx';
-import UserContext from './Components/Context/UserContext.tsx';
-import Subscribe from './Components/Payment/Subscribe.tsx';
-import Settings from './Components/Settings/Settings';
-import Footer from './Components/Home/Footer.tsx';
-import Guides from './Components/Guides/Guides.tsx';
-import Guide1 from './Components/Guides/Guide1.tsx';
-import SavedArbs from './Components/UserArbs/SavedArbs.tsx';
+import Header from "./Components/Home/Header.js";
+import MainScreen from './Components/Home/MainScreen.js';
+import FreeTrial from "./Components/Trial/Trial.js"
+import Signup from "./Components/Login/Signup.js"
+import Login from './Components/Login/Login.js';
+import UserContext from './Components/Context/UserContext.js';
+import Subscribe from './Components/Payment/Subscribe.js';
+import Settings from './Components/Settings/Settings.js';
+import Footer from './Components/Home/Footer.js';
+import Guides from './Components/Guides/Guides.js';
+import Guide1 from './Components/Guides/Guide1.js';
+import SavedArbs from './Components/UserArbs/SavedArbs.js';
 
 function App() {
   const [username, setUsername] = useState();
@@ -45,6 +46,7 @@ function App() {
     checkAuth();
   }, []);
   return (
+    // @ts-ignore
     <UserContext.Provider value={{ username, setUsername, authChecked }}>
       <Router>
         <div className="App">

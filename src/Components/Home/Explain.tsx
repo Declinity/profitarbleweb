@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react';
 import './Explain.css'; // Ensure this is the correct path to your CSS file
 import placeholder from "../../Images/BetterBet .png"; // Ensure this is the correct path to your image

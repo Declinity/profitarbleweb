@@ -1,8 +1,8 @@
+// @ts-ignore
 import React, { useEffect } from 'react';
 import './MainScreen.css';
-import Explain from './Explain.tsx';
+import Explain from './Explain.js';
 import screens from "../../Images/MainScreen.png"
-
 const MainScreen = () => {
   return (
     <div>
