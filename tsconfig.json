@@ -15,6 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noEmitOnError": false,
+    "ignoreDeprecations": "5.0",
     "suppressImplicitAnyIndexErrors": true, // Suppress implicit any errors
     "noUnusedLocals": false, // Suppress unused variable errors
     "noUnusedParameters": false,
