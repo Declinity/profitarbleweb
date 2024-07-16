@@ -4,36 +4,56 @@ import './Settings.css';
 
 const Settings = () => {
     // @ts-ignore
-    /* const { username, authChecked, setUsername } = useContext(UserContext);
+    const { username, authChecked, setUsername } = useContext(UserContext);
+    // @ts-ignore
     const [trialStatus, setTrialStatus] = useState(null);
+    // @ts-ignore
     const [proVersionActive, setProVersionActive] = useState(false);
+    // @ts-ignore
     const [freeTrialActive, setFreeTrialActive] = useState(false);
+    // @ts-ignore
     const [proVersionAccess, setProVersionAccess] = useState(false);
+    // @ts-ignore
 
     useEffect(() => {
+        // @ts-ignore
         fetchTrialStatus();
+        // @ts-ignore
     }, [username]);
 
+    // @ts-ignore
     const fetchTrialStatus = () => {
+        // @ts-ignore
         if (username && authChecked) {
+            // @ts-ignore
             fetch(`http://localhost:3001/api/user-trial-status?username=${username}`)
+                // @ts-ignore
                 .then(response => response.json())
+                // @ts-ignore
                 .then(data => {
+                    // @ts-ignore
                     setTrialStatus(data);
+                    // @ts-ignore
                     updateStatesBasedOnTrialStatus(data);
                 })
+                // @ts-ignore
                 .catch(error => console.error('Error fetching trial status:', error));
         }
     };
-
+    // @ts-ignore
     const updateStatesBasedOnTrialStatus = (data) => {
+        // @ts-ignore
         const currentDate = new Date();
+        // @ts-ignore
         setProVersionActive(data.proVersion && new Date(data.proVersionExpDate) > currentDate);
+        // @ts-ignore
         setFreeTrialActive(data.freeTrial && new Date(data.freeTrialExpDate) > currentDate);
+        // @ts-ignore
         setProVersionAccess(!data.proVersion && new Date(data.proVersionExpDate) > currentDate);
     };
-
+    // @ts-ignore
     const handleCancelProVersion = () => {
+        // @ts-ignore
         fetch('http://localhost:3001/api/cancel-subscription', {
             method: 'POST',
             headers: {
@@ -49,22 +69,26 @@ const Settings = () => {
             })
             .catch(error => console.error('Error cancelling pro version:', error));
     };
-
+    // @ts-ignore
     const handleLogout = () => {
+        // @ts-ignore
         localStorage.removeItem('accessToken');
+        // @ts-ignore
         setUsername(null);
+        // @ts-ignore
         window.location.href = '/login';
     };
-
+    // @ts-ignore
     const formatDate = (dateString) => {
+        // @ts-ignore
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         // @ts-ignore
         return new Date(dateString).toLocaleDateString(undefined, options);
-    }; */
+    };
 
     return (
         <div className="settings-page">
-            {/* <div className="settings-container">
+            <div className="settings-container">
                 <h1 className="settings-title">Settings</h1>
                 {trialStatus ? (
                     <div className="settings-content">
@@ -84,8 +108,7 @@ const Settings = () => {
                     <p>Loading trial status...</p>
                 )}
                 <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
-            </div> */}
-            HI
+            </div>
         </div>
     );
 };
