@@ -4,7 +4,6 @@ import './Settings.css';
 
 const Settings = () => {
     // @ts-ignore
-
     const { username, authChecked, setUsername } = useContext(UserContext);
     const [trialStatus, setTrialStatus] = useState(null);
     const [proVersionActive, setProVersionActive] = useState(false);
@@ -60,7 +59,7 @@ const Settings = () => {
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         // @ts-ignore
-        return new Date(dateString).toLocaleDateString(undefined, options);
+        return new Date(dateString).toLocaleDateString(options);
     };
 
     return (
