@@ -4,7 +4,7 @@ import './Settings.css';
 
 const Settings = () => {
     // @ts-ignore
-    const { username, authChecked, setUsername } = useContext(UserContext);
+    /* const { username, authChecked, setUsername } = useContext(UserContext);
     const [trialStatus, setTrialStatus] = useState(null);
     const [proVersionActive, setProVersionActive] = useState(false);
     const [freeTrialActive, setFreeTrialActive] = useState(false);
@@ -20,18 +20,18 @@ const Settings = () => {
                 .then(response => response.json())
                 .then(data => {
                     setTrialStatus(data);
-                    //updateStatesBasedOnTrialStatus(data);
+                    updateStatesBasedOnTrialStatus(data);
                 })
                 .catch(error => console.error('Error fetching trial status:', error));
         }
     };
 
-    /* const updateStatesBasedOnTrialStatus = (data) => {
+    const updateStatesBasedOnTrialStatus = (data) => {
         const currentDate = new Date();
         setProVersionActive(data.proVersion && new Date(data.proVersionExpDate) > currentDate);
         setFreeTrialActive(data.freeTrial && new Date(data.freeTrialExpDate) > currentDate);
         setProVersionAccess(!data.proVersion && new Date(data.proVersionExpDate) > currentDate);
-    }; */
+    };
 
     const handleCancelProVersion = () => {
         fetch('http://localhost:3001/api/cancel-subscription', {
@@ -60,11 +60,11 @@ const Settings = () => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         // @ts-ignore
         return new Date(dateString).toLocaleDateString(undefined, options);
-    };
+    }; */
 
     return (
         <div className="settings-page">
-            <div className="settings-container">
+            {/* <div className="settings-container">
                 <h1 className="settings-title">Settings</h1>
                 {trialStatus ? (
                     <div className="settings-content">
@@ -84,7 +84,8 @@ const Settings = () => {
                     <p>Loading trial status...</p>
                 )}
                 <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
-            </div>
+            </div> */}
+            HI
         </div>
     );
 };
