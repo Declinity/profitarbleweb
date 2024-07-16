@@ -56,11 +56,11 @@ const Settings = () => {
         window.location.href = '/login';
     };
 
-    const formatDate = (dateString) => {
+    /* const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         // @ts-ignore
-        return new Date(dateString).toLocaleDateString(options);
-    };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+    }; */
 
     return (
         <div className="settings-page">
@@ -68,14 +68,14 @@ const Settings = () => {
                 <h1 className="settings-title">Settings</h1>
                 {trialStatus ? (
                     <div className="settings-content">
-                        {proVersionActive ? (
+                        {/* {proVersionActive ? (
                             <p>You are subscribed to the pro version! Your next invoice will be: {formatDate(trialStatus.proVersionExpDate)}</p>
                         ) : proVersionAccess ? (
                             <p>You are no longer subscribed, but have access to the service until {formatDate(trialStatus.proVersionExpDate)}</p>
                         ) : null}
                         {freeTrialActive && (
                             <p>Your free trial will expire on: {formatDate(trialStatus.freeTrialExpDate)}</p>
-                        )}
+                        )} */}
                         {proVersionActive && (
                             <button className="settings-button cancel-button" onClick={handleCancelProVersion}>Unsubscribe</button>
                         )}
