@@ -4,8 +4,9 @@ import './Settings.css';
 
 const Settings = () => {
     // @ts-ignore
+
     const { username, authChecked, setUsername } = useContext(UserContext);
-    const [trialStatus, setTrialStatus] = useState<any>(null);
+    const [trialStatus, setTrialStatus] = useState(null);
     const [proVersionActive, setProVersionActive] = useState(false);
     const [freeTrialActive, setFreeTrialActive] = useState(false);
     const [proVersionAccess, setProVersionAccess] = useState(false);
@@ -26,7 +27,7 @@ const Settings = () => {
         }
     };
 
-    const updateStatesBasedOnTrialStatus = (data: any) => {
+    const updateStatesBasedOnTrialStatus = (data) => {
         const currentDate = new Date();
         setProVersionActive(data.proVersion && new Date(data.proVersionExpDate) > currentDate);
         setFreeTrialActive(data.freeTrial && new Date(data.freeTrialExpDate) > currentDate);
@@ -56,8 +57,9 @@ const Settings = () => {
         window.location.href = '/login';
     };
 
-    const formatDate = (dateString: string): string => {
-        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formatDate = (dateString) => {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        // @ts-ignore
         return new Date(dateString).toLocaleDateString(undefined, options);
     };
 
