@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+.game-button {
+    background: linear-gradient(45deg, #033541, #0fc4f1);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profit-margin {
+    color: red;
+    /* This will make the profit margin text red */
+}
+
+.game-details {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Highlight style */
+.highlight {
+    background-color: yellow;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tooltip styles */
+.highlight:hover::before {
+    content: "Read Guide";
+    position: absolute;
+    bottom: 100%;
+    /* Position above the element */
+    left: 50%;
+    /* Start from the middle of the element */
+    transform: translateX(-50%);
+    /* Center the tooltip */
+    white-space: nowrap;
+    /* Keep the text on one line */
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: block;
+    z-index: 10;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dim the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure it's above all other content */
+}
+
+.overlay-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content-edit {
+    background: #f0f8ff;
+    /* Light blue background */
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #87ceeb;
+    /* Soft blue border */
+    font-family: 'Arial', sans-serif;
+    /* Matching font */
+}
+
+.overlay-content-edit div {
+    margin-bottom: 15px;
+}
+
+.overlay-content-edit button {
+    margin-top: 10px;
+    background-color: #0073e6;
+    /* Button blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    /* Add margin between buttons */
+}
+
+.overlay-content-edit button:hover {
+    background-color: #005bb5;
+    /* Darker blue on hover */
+}
+
+.overlay-content-edit label {
+    font-weight: bold;
+    color: #333;
+    /* Dark grey for contrast */
+}
+
+.overlay-content-edit input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #87ceeb;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-content-edit strong {
+    color: #0073e6;
+    /* Strong blue text */
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlighted {
+    background-color: transparent;
+    color: yellow;
+    text-decoration: wavy;
+    cursor: pointer;
+    padding: 0;
+}
+
+.highlight:hover {
+    z-index: 100;
+    /* Ensure the tooltip is above other components */
+}
+
+.highlight:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    display: block;
+    z-index: 9;
+}
+
+.game-detail {
+    border: 2px solid #033541;
+    border-top: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #7fdfe1, white);
+    position: relative;
+    overflow: hidden;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.game-detail::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    /* Center triangle and move half its width to the right */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 150px 150px 0;
+    /* Size of the triangle */
+    border-color: transparent #033541 transparent transparent;
+    /* Blue right border becomes the triangle */
+}
+
+/* Add this to remove space between the button and the details */
+.game-button+.game-details {
+    margin-top: -1px;
+}
+
+.links-box {
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center items horizontally */
+    flex-wrap: wrap;
+    /* Wrap items to the next line if there's not enough space */
+    gap: 5px;
+}
+
+.link-button {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    transition: 0.3s;
+    background: blue;
+    border: 2px solid blue;
+    color: white;
+    text-decoration: none;
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+}
+
+.link-button:hover {
+    background-color: #24a10b;
+    border: 2px solid #24a10b;
+}
+
+.edit-button {
+    background-color: #0073e6;
+    /* Button blue */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button:hover {
+    background-color: #005bb5;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+.edit-button:active {
+    background-color: #004494;
+    /* Even darker blue on active */
+    transform: translateY(0);
+    /* Remove lift on active */
+}

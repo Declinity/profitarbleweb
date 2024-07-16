@@ -1,0 +1,160 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+.header {
+  display: flex;
+  justify-content: center;
+  /* Center the logo */
+  align-items: center;
+  /* Align items vertically */
+  background: linear-gradient(to bottom, rgba(0, 34, 255, 0.466), rgba(61, 74, 161, 0.171));
+  height: calc(100vh / 8);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buttons-container {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  /* Gap between the buttons */
+}
+
+.left-buttons {
+  left: 0;
+  /* Align the left buttons to the left edge */
+}
+
+.right-buttons {
+  right: 0;
+  /* Align the right buttons to the right edge */
+}
+
+.header-content {
+  display: flex;
+  /* Enable flexbox for the inner container */
+  align-items: center;
+  /* Center items vertically */
+  gap: 20px;
+  /* Space between the items */
+}
+
+.logo {
+  height: calc(100vh / 8 * 0.7);
+  /* 70% of the header's height */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home-button {
+  padding: 10px 20px;
+  width: 165px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Specific styles for left buttons */
+.home-button.left-button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+
+.home-button.left-button:hover {
+  background: white;
+  color: blue;
+}
+
+.home-button.right-button {
+  background: blue;
+  border: 2px solid blue;
+  color: white;
+}
+
+.home-button.right-button:hover {
+  background: white;
+  color: blue;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.dropdown-container {
+  display: none;
+  position: relative;
+}
+
+.dropdown-toggle {
+  padding: 10px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  background-color: white;
+  color: #333;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-item i {
+  font-size: 18px;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+
+  .left-buttons,
+  .right-buttons,
+  .logo {
+    display: none;
+  }
+
+  .dropdown-container {
+    display: block;
+  }
+}

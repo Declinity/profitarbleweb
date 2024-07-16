@@ -1,0 +1,40 @@
+.free-trial-container {
+    position: relative;
+    top: calc(100vh / 8 + 20px);
+    width: calc(7/8 * 100vw);
+    height: calc(19/20 * 100vh - (100vh / 8 + 20px + 70px));
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-bottom: calc(100vh / 8 + 40px); /* Added margin-bottom to avoid overlapping with footer */
+
+
+}
+
+.free-trial-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.free-trial-container::-webkit-scrollbar-track {
+    background: #f0f8ff;
+    border-radius: 10px;
+}
+
+.free-trial-container::-webkit-scrollbar-thumb {
+    background-color: #0073e6;
+    border-radius: 10px;
+    border: 3px solid #f0f8ff;
+}
+
+.free-trial-container::-webkit-scrollbar-thumb:hover {
+    background-color: #005bb5;
+}
+
+.game-component-wrapper {
+    margin-bottom: 20px;
+}

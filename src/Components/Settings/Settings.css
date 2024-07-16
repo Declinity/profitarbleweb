@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.settings-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - calc(100vh / 8));
+    /* Subtract header height */
+    background: url('../Images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: calc(100vh / 8);
+    /* Add padding to account for header height */
+}
+
+.settings-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    position: relative;
+}
+
+.settings-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.settings-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.settings-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.cancel-button {
+    background-color: #0073e6;
+}
+
+.cancel-button:hover {
+    background-color: #005bb5;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}

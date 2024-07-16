@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+.main-screen-container {
+    height: calc(7/8 * 100vh);
+    /* 6/8 of the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* horizontally center the content */
+    justify-content: center;
+    /* vertically center the text-container */
+    background: transparent;
+    padding-top: calc(8/9 * 100vh);
+}
+
+.text-container {
+    position: absolute;
+    /* Position absolutely to keep it centered */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for its own height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* horizontally center the content */
+    gap: 10px;
+    /* space between paragraphs */
+}
+
+.main-screen-container p {
+    font-family: 'Rubik Wet Paint', serif;
+    font-weight: 500;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    /* Adjusted line height */
+    margin: 0;
+    /* Remove default margins */
+    color: white;
+}
+
+/* Add hover effect for interaction (optional) */
+.main-screen-container p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.main-screen-image {
+    position: relative;
+    /* Position the image relative */
+    top: 40px;
+    width: 560px;
+    /* adjust as necessary */
+    height: 300px;
+    /* adjust as necessary */
+    margin-top: 20px;
+    /* adjust as necessary */
+}
+
+.start-now-button {
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+    padding: 15px 30px;
+    /* Increased padding for a bigger button */
+    font-size: 20px;
+    /* Increased font size */
+    border-radius: 25px;
+    /* Adjusted for a bigger button */
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    /* Space between the text and the button */
+}
+
+.start-now-button:hover {
+    background-color: blue;
+    border-color: blue;
+}

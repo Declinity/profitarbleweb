@@ -1,0 +1,185 @@
+.payment-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 80%;
+    height: auto;
+    /* Adjust height for scrolling */
+    margin: 0 auto;
+    position: relative;
+    /* Changed to relative */
+    top: calc(100vh / 8 + 20px);
+    /* Positioned below header with additional spacing */
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: calc(100vh / 8 + 40px); /* Added margin-bottom to avoid overlapping with footer */
+
+}
+
+.original-price {
+    text-decoration: line-through;
+    /* Creates strikethrough effect */
+    color: #888;
+    /* Greyed out color for original price */
+    margin-right: 10px;
+    /* Space between the original price and discounted price */
+    font-size: 18px;
+    /* Smaller font size for original price */
+}
+
+.discounted-price {
+    color: #4CAF50;
+    /* Green color for discounted price */
+    font-size: 24px;
+    /* Larger font size for emphasis */
+}
+
+.discount-message {
+    display: block;
+    /* Makes the discount message appear on a new line */
+    color: #4CAF50;
+    /* Green color for the discount message */
+    font-weight: bold;
+    margin-top: 5px;
+    /* Space between the prices and the discount message */
+}
+
+.subscription-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align content to the start */
+    align-items: center;
+    /* Center align the items */
+    width: 30%;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    /* This will ensure it takes the full height based on content */
+}
+
+.subscription-title {
+    color: #4CAF50;
+    /* Green color as per design */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subscription-price {
+    font-size: 48px;
+    /* Large font size for price */
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.subscription-rate {
+    font-size: 16px;
+    color: #666666;
+    /* Dark grey color */
+    margin-bottom: 15px;
+}
+
+.subscription-badge {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subscription-features {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.subscription-features li {
+    margin-bottom: 10px;
+}
+
+.price-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 0;
+    /* Fixes spacing issues when using inline-block elements */
+}
+
+.subscription-button {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: none;
+    /* No shadow for the button as per design */
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.subscription-button:hover {
+    background-color: #43A047;
+    /* Darker green on hover */
+}
+
+.subscription-button:after {
+    content: '→';
+    /* Adds arrow symbol */
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Styles for the disabled state */
+.subscription-button:disabled {
+    background-color: #B0BEC5;
+    /* Grey background when disabled */
+    cursor: not-allowed;
+}
+
+.subscription-button:disabled:hover {
+    background-color: #B0BEC5;
+    /* Ensure the background color doesn't change on hover when disabled */
+}
+
+/* Remove default styles from the button and the list */
+button:focus,
+button:active,
+li:focus,
+li:active {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .payment-box {
+        display: block;
+        position: static;
+        transform: none;
+        height: auto;
+        padding: 10px;
+        overflow-y: auto;
+        margin-top: calc(100vh / 8 + 20px);
+        /* Additional top margin for smaller devices */
+    }
+
+    .subscription-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

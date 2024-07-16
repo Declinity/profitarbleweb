@@ -1,0 +1,106 @@
+.sign-up {
+    background: linear-gradient(145deg, #e6f2ff, #b3d1ff);
+    padding: 30px;
+    width: 350px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up h2 {
+    margin-bottom: 20px;
+    color: #1E3A8A;
+    font-family: 'Arial', sans-serif;
+}
+
+.sign-up form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sign-up label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+.sign-up input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.sign-up button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.3);
+}
+
+.sign-up button:disabled {
+    background-color: #99cfff;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.sign-up input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-height: 850px) {
+    .sign-up {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .sign-up form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .sign-up label {
+        grid-column: span 1;
+    }
+
+    .sign-up input {
+        width: 100%;
+    }
+
+    .sign-up button {
+        grid-column: span 2;
+    }
+}
