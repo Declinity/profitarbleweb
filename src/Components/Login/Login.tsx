@@ -31,7 +31,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://127.0.0.1:3001/api/login', {
+            const response = await fetch('https://profitarble.onrender.com/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const Login = () => {
                 const errorResponse = await response.text();
                 if (errorResponse === 'Email not verified') {
                     // Fetch the email based on the username
-                    const emailResponse = await fetch(`http://127.0.0.1:3001/api/get-email?username=${formData.username}`);
+                    const emailResponse = await fetch(`https://profitarble.onrender.com/api/get-email?username=${formData.username}`);
                     if (emailResponse.ok) {
                         const { email } = await emailResponse.json();
                         setEmail(email);
@@ -76,7 +76,7 @@ const Login = () => {
         if (resendCooldown > 0) return;
 
         try {
-            const response = await fetch('http://127.0.0.1:3001/api/resend-verification-email', {
+            const response = await fetch('https://profitarble.onrender.com/api/resend-verification-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
