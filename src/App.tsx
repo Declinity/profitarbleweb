@@ -24,7 +24,7 @@ function App() {
       const token = localStorage.getItem('accessToken');
       if (token) {
         try {
-          const response = await fetch('http://127.0.0.1:3001/api/username', {
+          const response = await fetch('https://profitarble.onrender.com/api/username', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
