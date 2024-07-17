@@ -26,7 +26,7 @@ const Settings = () => {
         // @ts-ignore
         if (username && authChecked) {
             // @ts-ignore
-            fetch(`http://localhost:3001/api/user-trial-status?username=${username}`)
+            fetch(`https://profitarble.onrender.com/api/user-trial-status?username=${username}`)
                 // @ts-ignore
                 .then(response => response.json())
                 // @ts-ignore
@@ -54,7 +54,7 @@ const Settings = () => {
     // @ts-ignore
     const handleCancelProVersion = () => {
         // @ts-ignore
-        fetch('http://localhost:3001/api/cancel-subscription', {
+        fetch('https://profitarble.onrender.com/api/cancel-subscription', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

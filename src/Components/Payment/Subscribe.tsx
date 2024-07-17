@@ -16,7 +16,7 @@ const Subscribe = () => {
 
     useEffect(() => {
         if (username) {
-            fetch(`http://localhost:3001/api/user-trial-status?username=${username}`)
+            fetch(`https://profitarble.onrender.com/api/user-trial-status?username=${username}`)
                 .then(response => response.json())
                 .then(trialStatus => setUserTrialStatus(trialStatus))
                 .catch(error => console.error('Error fetching trial status:', error));
