@@ -40,7 +40,7 @@ const Signup = () => {
         } */
 
         try {
-            const response = await fetch('http://127.0.0.1:3001/api/signup', {
+            const response = await fetch('https://profitarble.onrender.com/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const Signup = () => {
         if (resendCooldown > 0) return;
 
         try {
-            const response = await fetch('http://127.0.0.1:3001/api/resend-verification-email', {
+            const response = await fetch('https://profitarble.onrender.com/api/resend-verification-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

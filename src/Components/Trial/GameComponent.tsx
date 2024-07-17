@@ -57,7 +57,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
     const handleSaveClick = async (entry) => {
         const token = localStorage.getItem("accessToken");
         try {
-            const response = await axios.post('http://127.0.0.1:3001/api/save-arb', { entry }, {
+            const response = await axios.post('https://profitarble.onrender.com/api/save-arb', { entry }, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -33,7 +33,7 @@ const Subscribe = () => {
             return;
         }
         try {
-            const { data } = await axios.post('http://127.0.0.1:3001/create-checkout-session', {}, {
+            const { data } = await axios.post('https://profitarble.onrender.com/create-checkout-session', {}, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                 }
@@ -50,7 +50,7 @@ const Subscribe = () => {
             return;
         }
         try {
-            const { data } = await axios.post('http://127.0.0.1:3001/create-checkout-session-month', {}, {
+            const { data } = await axios.post('https://profitarble.onrender.com/create-checkout-session-month', {}, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                 }
@@ -67,7 +67,7 @@ const Subscribe = () => {
             return;
         }
         try {
-            const { data } = await axios.post('http://127.0.0.1:3001/api/start-free-trial', {}, {
+            const { data } = await axios.post('https://profitarble.onrender.com/api/start-free-trial', {}, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                 }
