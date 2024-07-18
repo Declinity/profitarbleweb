@@ -1,3 +1,8 @@
+.signup-container {
+    position: absolute;
+    margin-bottom: calc(100vh / 8 + 40px); /* Added margin-bottom to avoid overlapping with footer */
+}
+
 .sign-up {
     background: linear-gradient(145deg, #e6f2ff, #b3d1ff);
     padding: 30px;

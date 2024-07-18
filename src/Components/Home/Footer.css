@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
 }
 
 .footer-left,
@@ -43,4 +44,29 @@
 .footer-social:hover {
     color: #1da1f2;
     /* Adjust color for hover state */
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-social {
+        font-size: 20px;
+    }
 }

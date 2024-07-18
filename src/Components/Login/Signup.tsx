@@ -150,6 +150,7 @@ const Signup = () => {
     };
 
     return (
+        <div className='signup-container'>
         <div className="sign-up">
             <h2>Sign Up</h2>
             <form onSubmit={handleSubmit}>
@@ -213,6 +214,7 @@ const Signup = () => {
                     {resendCooldown > 0 ? `Resend Email (${resendCooldown}s)` : "Haven't received email? Send again"}
                 </button>
             )}
+        </div>
         </div>
     );
 };

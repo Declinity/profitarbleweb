@@ -4,11 +4,9 @@
   position: relative;
   width: 100%;
   padding-top: 50px;
-  /* Height of the fade element */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Make sure the container fills the viewport height */
 }
 
 /* Add to your Explain.css */
@@ -18,34 +16,27 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  /* Space below the video */
 }
 
 .video-border {
   padding: 10px;
-  /* Adjust padding for border size */
   border-radius: 15px;
-  /* Adjust for bent border */
 }
 
 .violet {
   background: #7d5ba6;
-  /* Mild violet */
 }
 
 .violet-light {
   background: #9b85b7;
-  /* Lighter shade */
 }
 
 .violet-lighter {
   background: #b8aad3;
-  /* Lightest shade */
 }
 
 iframe {
   border-radius: 15px;
-  /* Match border radius with .video-border */
 }
 
 .fade {
@@ -54,33 +45,23 @@ iframe {
   left: 0;
   right: 0;
   height: 50px;
-  /* Height of the gradient fade */
   background: linear-gradient(to bottom, transparent, white 50px);
   z-index: 2;
-  /* Higher z-index to ensure it's above the checker pattern */
 }
 
 .checker {
   min-height: calc(100vh - 50px);
   flex-grow: 1;
   position: relative;
-
-  background-image: repeating-radial-gradient(circle at 100% 150%,
-      #ffffff 10px,
-      #ebfcff 20px);
-
+  background-image: repeating-radial-gradient(circle at 100% 150%, #ffffff 10px, #ebfcff 20px);
   background-position: 0 0, 10px 10px;
   background-size: 20px 20px;
   z-index: 1;
-  /* Lower z-index so it's below the fade */
-  /* No need for top padding, content will flow naturally below the fade */
 }
-
-
 
 .explain-title {
   margin: 0;
-  padding: 50px 0 50px 0;
+  padding: 50px 0;
   text-align: center;
   font-family: 'Rubik Wet Paint', serif;
   font-weight: 500;
@@ -99,7 +80,7 @@ iframe {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   transition: all 0.3s ease;
   background: linear-gradient(to right, #e6e6fa, #fff);
   border-left: 4px solid #6a5acd;
@@ -111,21 +92,16 @@ iframe {
 
 .segment:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Enhanced shadow on hover for interactive feel */
   border-color: #d1c4e9;
-  /* Light blue-violet border on hover */
 }
 
 .text-section h2 {
   color: #6a5acd;
-  /* Blue-violet color for the title to match the theme */
   margin-bottom: 15px;
-  /* Adjusted margin for better spacing */
 }
 
 .text-section p {
   color: #555;
-  /* Slightly darker text for improved readability */
 }
 
 .image {
@@ -142,13 +118,51 @@ iframe {
 
 .widthtest2 {
   width: 75%;
-  /* Set the width of the <p> to 75% */
   margin-left: auto;
-  /* Automatically adjust the margin on the left */
   margin-right: 0;
-  /* Keep the margin on the right to 0 */
   text-align: right;
-  /* Align the text to the right */
   display: block;
-  /* Ensure the <p> is treated as a block-level element */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .segment {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .segment .image {
+    display: none;
+  }
+
+  .segment .text-section {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .widthtest, .widthtest2 {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .test {
+    text-align: center;
+  }
+  .video-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .video-border {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
 }

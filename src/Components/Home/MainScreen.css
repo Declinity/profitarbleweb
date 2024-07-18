@@ -23,9 +23,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* horizontally center the content */
     gap: 10px;
-    /* space between paragraphs */
+    text-align: center;
 }
 
 .main-screen-container p {

@@ -12,7 +12,6 @@ const Footer = () => {
                     <a href="/contact-us" className="footer-link">Contact Us</a>
                     <a href="/terms-conditions" className="footer-link">Terms & Conditions</a>
                 </div>
-                <img src={logo} alt="BetterBet Logo" className="footer-logo" />
                 <div className="footer-right">
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="footer-social"><FaXTwitter /></a>
                     <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="footer-social"><FaYoutube /></a>
