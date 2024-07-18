@@ -264,3 +264,24 @@
     transform: translateY(0);
     /* Remove lift on active */
 }
+@media (max-height: 650px) {
+    .overlay-content-edit {
+        padding: 10px;
+        width: 90%;
+        max-height: 80%;
+        overflow-y: auto;
+    }
+
+    .overlay-content-edit div {
+        margin-bottom: 10px;
+    }
+
+    .overlay-content-edit input {
+        padding: 6px;
+    }
+
+    .overlay-content-edit button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
