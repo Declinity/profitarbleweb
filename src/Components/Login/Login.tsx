@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Signup.css';
+import UserContext from '../Context/UserContext';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -10,6 +13,14 @@ const Login = () => {
     const [resendCooldown, setResendCooldown] = useState(0);
     const [email, setEmail] = useState('');
     const [showResendButton, setShowResendButton] = useState(false);
+    const { username, authChecked } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (authChecked && !username) {
+            navigate('/login');
+        }
+    }, [authChecked, username, navigate]);
 
     useEffect(() => {
         let timer;
