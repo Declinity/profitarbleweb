@@ -8,8 +8,8 @@ const MainScreen = () => {
     <div>
       <div className="main-screen-container">
         <div className="text-container">
-          <p>Never lose a bet again!</p>
-          <p>Get Ahead of the Game!</p>
+          <p>Make Every Bet a Winning One</p>
+          <p>With the #1 Arbitrage Software!</p>
           <button className="start-now-button">Start Now!</button>
         </div>
         <img src={screens} alt="Description of Image" className="main-screen-image" width="560px" />
