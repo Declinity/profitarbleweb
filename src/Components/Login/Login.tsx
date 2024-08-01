@@ -17,8 +17,8 @@ const Login = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (authChecked && !username) {
-            navigate('/login');
+        if (authChecked && username) {
+            navigate('/');
         }
     }, [authChecked, username, navigate]);
 
