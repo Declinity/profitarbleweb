@@ -151,72 +151,77 @@ const Signup = () => {
 
     return (
         <div className='signup-container'>
-        <div className="sign-up">
-            <h2>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.name && <p className="error">{errors.name}</p>}
-                </label>
-                <label>
-                    Surname:
-                    <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.surname && <p className="error">{errors.surname}</p>}
-                </label>
-                <label>
-                    Username:
-                    <input type="text" name="username" value={formData.username} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.username && <p className="error">{errors.username}</p>}
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.email && <p className="error">{errors.email}</p>}
-                </label>
-                <label>
-                    Password:
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.password && <p className="error">{errors.password}</p>}
-                </label>
-                <label>
-                    Confirm Password:
-                    <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
-                    {/* @ts-ignore */}
-                    {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
-                </label>
-                <button
-                    type="submit"
-                    disabled={
-                        !formData.name ||
-                        !formData.surname ||
-                        !formData.username ||
-                        !formData.email ||
-                        !formData.password ||
-                        !formData.confirmPassword
-                    }
-                >
-                    Sign Up
-                </button>
-            </form>
-            {message && <p className="message">{message}</p>}
-            {message && (
-                <button
-                    className="resend-button"
-                    onClick={handleResendEmail}
-                    disabled={resendCooldown > 0}
-                >
-                    {resendCooldown > 0 ? `Resend Email (${resendCooldown}s)` : "Haven't received email? Send again"}
-                </button>
-            )}
-        </div>
+            <div className="sign-up">
+                {message ? (
+                    <>
+                        <p className="message">{message}</p>
+                        <button
+                            className="resend-button"
+                            onClick={handleResendEmail}
+                            disabled={resendCooldown > 0}
+                        >
+                            {resendCooldown > 0 ? `Resend Email (${resendCooldown}s)` : "Haven't received email? Send again"}
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <h2>Sign Up</h2>
+                        <form onSubmit={handleSubmit}>
+                            <label>
+                                Name:
+                                <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.name && <p className="error">{errors.name}</p>}
+                            </label>
+                            <label>
+                                Surname:
+                                <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.surname && <p className="error">{errors.surname}</p>}
+                            </label>
+                            <label>
+                                Username:
+                                <input type="text" name="username" value={formData.username} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.username && <p className="error">{errors.username}</p>}
+                            </label>
+                            <label>
+                                Email:
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.email && <p className="error">{errors.email}</p>}
+                            </label>
+                            <label>
+                                Password:
+                                <input type="password" name="password" value={formData.password} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.password && <p className="error">{errors.password}</p>}
+                            </label>
+                            <label>
+                                Confirm Password:
+                                <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+                                {/* @ts-ignore */}
+                                {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
+                            </label>
+                            <button
+                                type="submit"
+                                disabled={
+                                    !formData.name ||
+                                    !formData.surname ||
+                                    !formData.username ||
+                                    !formData.email ||
+                                    !formData.password ||
+                                    !formData.confirmPassword
+                                }
+                            >
+                                Sign Up
+                            </button>
+                        </form>
+                    </>
+                )}
+            </div>
         </div>
     );
-};
-
+}
+    
 export default Signup;

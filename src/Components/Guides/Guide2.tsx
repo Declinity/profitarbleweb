@@ -1,19 +1,33 @@
 import React from 'react';
 import "./Guides.css"
+import image from "../../Images/Voids.png"
 const Guide2 = () => {
     return (
         <div className='guides-container'>
-            <h2>Card Arbitrage</h2>
-            <p>Card arbitrages require a little more caution to bet compared to other markets. While all other markets are settled by Opta, different bookmakers use their own settling rules in the event of a red card.</p>
-            <p>Keep in mind that "booking points" is an alternative way of measuring cards. With our software, the "Total Cards" market compares both the Cards and Booking Points markets to find arbs.</p>
-            <p>This image shows a few examples of how the card rules apply differently across bookmakers:</p>
-            <p>As such, it is always essential to ensure that two bookmakers are applying the same rules when arbing the card market, as a red card and the exact combination of yellow cards could make both sides of the bet lose.</p>
-            <p>However, it is also possible that both sides of the bet may both win. Let's look a few examples:</p>
-            <p>Betfair Over 4.5 & BetUK Under 4.5</p>
-            <p>Here, we can see that in the event of a red card and three yellows, as Betfair's card count will be 4 and BetUK's card count will be 5. As such both bets will win.</p>
-            <p>Sky 60+ booking points & Betfair Under 5.5</p>
-            <p>Here, with a combination of one red card and four yellow cards, both bets will win. Sky's side will have 65 booking points, while Betfair's side will have 5 cards.</p>
-            <p>Of course, if there's no red card, one side will always win and the other always lose, like all other arbitrage bets. Although it is very rare for the exact combination of reds and yellows to make both sides lose, it is important to be aware of this risk when arbing between two bookmakers with different rules.</p>
+            <h1>Introduction to Arbing.</h1>
+            <p>Arbitrage bets (also known as surebets or arbs) are a way of generating profit from bookmakers no matter the outcome of an event with very little to no risk involved. Take a look at this example:</p>
+            <img src={image} />
+            <p>If you aren’t familiar with sports betting, you might be asking yourself how there can be a decimal number of goals, however this simply means that if there are three goals or more, the “Over” wins, and if there’s less than three then the “Under” wins. In other words, over 2.5 means “More than 2” and under 2.5 means “Less or equal to 2”.</p>
+            <p>Now look at the odds – they are both 2.20. Placing a 50£ bet will give you back 20£ in profit no matter the outcome, as one side will always win and the other side will always lose.</p>
+            <p>On the side that wins: 50£ * 2.20 = 120£, 120£ – 50 = 70£ profit</p>
+            <p>On the side that loses: -50£ loss</p>
+            <p>Total profit: 70£ - 50£ = 20£.</p>
+            <h2>Is it legal?</h2>
+            <p>Yes, arbitrage betting is completely legal as you are simply placing bets on two different websites.</p>
+            <h2>Can I only do this on the goals market?</h2>
+            <p>No, in fact finding an arb on the goals market is quite rare. However, there are tons of other markets that our program can find for you which no other service in the UK can, and most of them are on high tier events – we will explain later on why this is important. There are some markets, like players and cards, which require special amounts of attention, but don’t worry, we’ve indicated those in our program with a “⚠️” sign and have dedicated guides on what you should look out for.</p>
+            <h2>What else should I look out for?</h2>
+            <p>There are a small number of general risks involved when arbitrage betting, albeit very different from normal sports betting. Since you are placing two separate bets on two websites, you want to ensure that both of them are locked in before the event starts. Here’s a list of helpful tips which will make your arbing journey a lot easier:</p>
+            <h3>-Learn the layouts of each website, as well as their mannerisms.</h3>
+            <p>This is probably the most important step. You should be aware if a website lets you cash out, where the markets are located, and so on.</p>
+            <h3>-Be aware of the maximum staking amount a bookmaker allows:</h3>
+            <p>Some bookies will tell you how much you’re allowed to place on a bet before you click the button, while others won’t tell you until you do. This can lead to an issue where you’ve locked in a bet on one side, while the other side gets rejected. You can simply place the bet at lower odds on another website, however this may generate a small loss. If a website offers you the opportunity to cash out, you should always place it on that side first, so in the rare event that if something goes wrong on the other side you’ll be able to easily get your money back.</p>
+            <h2>How much should I stake on each arb?</h2>
+            <p>If you’re starting out, we recommend placing around £75-£80 (in total) on an arb. This way you should be able to earn steady profits without risking too much. If you’re experienced, you should place anywhere between £100 and £150 for each arb – however this requires a larger bankroll. We also recommend placing more arbs on lower stakes, than high stakes on less arbs. This is because if you bet large amounts, the bookmakers will restrict you faster as they’ll be aware of you being a smart bettor.</p>
+            <h2>How do I avoid restrictions?</h2>
+            <p>If you arbitrage a lot, you will be restricted. Usually this means you’ll only be able to place 1 or two pounds on a bet at most, which can be frustrating. It’s not possible to avoid restrictions completely, however keep in mind that we have over 50 bookmakers available which should last you well over a year if you arb consistently.</p>
+            <p>Some website offer the same odds, for these we advise you to only open one account and, when you get restricted, move on to the next website. By doing so you should be able to consistently arb for at least a year, week in week out. Also keep in mind some websites are more lenient than others so they’ll last a lot longer.</p>
+            <p>Other options include asking family/friends to open accounts for you, however you will also need to be able to use a debit card that’s in their name. If you’d like to know more about opening multiple accounts, or have any other questions, join our Discord and we’ll be more than happy to help you!</p>
         </div>
     );
 };
