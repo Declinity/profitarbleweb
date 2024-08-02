@@ -73,7 +73,7 @@ const Login = () => {
 
             const result = await response.json();
             localStorage.setItem('accessToken', result.token);
-            window.location.href = '/login';
+            window.location.href = '/subscribe';
         } catch (error) {
             console.error('There was an error!', error);
             if (error.message === 'Email not verified') {
