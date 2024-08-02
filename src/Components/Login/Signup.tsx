@@ -3,8 +3,6 @@ import './Signup.css';
 
 const Signup = () => {
     const [formData, setFormData] = useState({
-        name: '',
-        surname: '',
         username: '',
         email: '',
         password: '',
@@ -46,8 +44,6 @@ const Signup = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name: formData.name,
-                    surname: formData.surname,
                     username: formData.username,
                     email: formData.email,
                     password: formData.password,
@@ -71,14 +67,6 @@ const Signup = () => {
         let errorMsg = '';
 
         switch (name) {
-            case 'name':
-            case 'surname':
-                if (value.length < 2) {
-                    errorMsg = `${name.charAt(0).toUpperCase() + name.slice(1)} must be at least 2 characters long.`;
-                } else if (/[^a-zA-Z]/.test(value)) {
-                    errorMsg = `${name.charAt(0).toUpperCase() + name.slice(1)} must contain only letters.`;
-                }
-                break;
             case 'username':
                 if (value.length < 3) {
                     errorMsg = 'Username must be at least 3 characters long.';
@@ -168,18 +156,6 @@ const Signup = () => {
                         <h2>Sign Up</h2>
                         <form onSubmit={handleSubmit}>
                             <label>
-                                Name:
-                                <input type="text" name="name" value={formData.name} onChange={handleChange} />
-                                {/* @ts-ignore */}
-                                {errors.name && <p className="error">{errors.name}</p>}
-                            </label>
-                            <label>
-                                Surname:
-                                <input type="text" name="surname" value={formData.surname} onChange={handleChange} />
-                                {/* @ts-ignore */}
-                                {errors.surname && <p className="error">{errors.surname}</p>}
-                            </label>
-                            <label>
                                 Username:
                                 <input type="text" name="username" value={formData.username} onChange={handleChange} />
                                 {/* @ts-ignore */}
@@ -206,8 +182,6 @@ const Signup = () => {
                             <button
                                 type="submit"
                                 disabled={
-                                    !formData.name ||
-                                    !formData.surname ||
                                     !formData.username ||
                                     !formData.email ||
                                     !formData.password ||
@@ -223,5 +197,5 @@ const Signup = () => {
         </div>
     );
 }
-    
+
 export default Signup;
