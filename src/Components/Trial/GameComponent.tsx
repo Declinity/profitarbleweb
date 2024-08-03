@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './GameComponent.css'; // Make sure the path is correct
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
+    const navigate = useNavigate();
     const [showDetails, setShowDetails] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const [showBetUKPopup, setShowBetUKPopup] = useState(false);
@@ -25,7 +27,9 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
         amountOnBetway: '---',
         amountOnOther: '---'
     });
-
+    const handleNavigate2 = () => {
+        navigate('/guides/guide3');
+    };
     const handleValueClick = (value) => {
         if (value === "Total Cards") {
             setShowPopup(true);
@@ -307,7 +311,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                     {showPopup && (
                         <div className="overlay">
                             <div className="popup">
-                                <p>Read Guide</p>
+                                <p className="popup-text" onClick={handleNavigate2}>Read Guide</p>
                                 <button onClick={() => setShowPopup(false)}>OK</button>
                             </div>
                         </div>
