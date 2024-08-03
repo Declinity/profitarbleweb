@@ -149,6 +149,19 @@
     margin-bottom: 20px;
     color: #333;
 }
+.popup-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.popup-text:hover {
+    color: #357abd;
+}
+
 
 .highlighted {
     background-color: transparent;

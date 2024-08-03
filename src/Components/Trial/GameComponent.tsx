@@ -31,6 +31,9 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
     const handleNavigate2 = () => {
         navigate('/guides/guide3');
     };
+    const handleNavigate = () => {
+        navigate('/guides/guide2');
+    };
     const handleValueClick = (value) => {
         if (value === "Total Cards") {
             setShowPopup(true);
@@ -317,6 +320,14 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                         <div className="overlay">
                             <div className="popup">
                                 <p className="popup-text" onClick={handleNavigate2}>Read Guide</p>
+                                <button onClick={() => setShowPopup(false)}>OK</button>
+                            </div>
+                        </div>
+                    )}
+                    {showPopupPlayer && (
+                        <div className="overlay">
+                            <div className="popup">
+                                <p className="popup-text" onClick={handleNavigate}>Read Guide</p>
                                 <button onClick={() => setShowPopup(false)}>OK</button>
                             </div>
                         </div>
