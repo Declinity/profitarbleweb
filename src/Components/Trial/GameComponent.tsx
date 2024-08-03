@@ -293,9 +293,10 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                                         <div key={idx}>
                                             {/* @ts-ignore */}
                                             <strong>{key}: </strong>
-                                            {value === "Total Cards" ? (
+                                            {/* @ts-ignore */}
+                                            {value === "Total Cards" || value.includes("Player") ? (
                                                 <span className="highlighted" onClick={() => handleValueClick(value)}>
-                                                    {value} ⚠️
+                                                    {`${value} ⚠️`}
                                                 </span>
                                             ) : (
                                                 value
