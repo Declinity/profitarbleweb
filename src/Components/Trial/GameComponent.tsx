@@ -7,6 +7,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
     const navigate = useNavigate();
     const [showDetails, setShowDetails] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
+    const [showPopupPlayer, setShowPopupPlayer] = useState(false);
     const [showBetUKPopup, setShowBetUKPopup] = useState(false);
     const [showBetfairPopup, setShowBetfairPopup] = useState(false);
     const [betfairUrl, setBetfairUrl] = useState('')
@@ -33,6 +34,9 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
     const handleValueClick = (value) => {
         if (value === "Total Cards") {
             setShowPopup(true);
+        }
+        else if (String(value).includes("Player")) {
+            setShowPopupPlayer(true)
         }
     };
     const toggleBetUKPopup = (visible, url = '') => {
@@ -294,7 +298,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                                             {/* @ts-ignore */}
                                             <strong>{key}: </strong>
                                             {/* @ts-ignore */}
-                                            {value === "Total Cards" || value.includes("Player") ? (
+                                            {value === "Total Cards" || String(value).includes("Player") ? (
                                                 <span className="highlighted" onClick={() => handleValueClick(value)}>
                                                     {`${value} ⚠️`}
                                                 </span>
