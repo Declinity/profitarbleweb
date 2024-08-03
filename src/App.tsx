@@ -15,6 +15,7 @@ import Guides from './Components/Guides/Guides.js';
 import Guide1 from './Components/Guides/Guide1.js';
 import SavedArbs from './Components/UserArbs/SavedArbs.js';
 import Guide2 from './Components/Guides/Guide2.js';
+import Guide3 from './Components/Guides/Guide3.js';
 
 function App() {
   const [username, setUsername] = useState();
@@ -61,10 +62,10 @@ function App() {
               <Route path="/subscribe" element={<Subscribe />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/guides" element={<Guides />} />
-              <Route path="/guides/guide1" element={<Guide1 />} />
-              <Route path="/guides/guide2" element={<Guide2 />} />
+              <Route path="/guides/cards" element={<Guide1 />} />
+              <Route path="/guides/players" element={<Guide2 />} />
+              <Route path="/guides/introduction" element={<Guide3 />} />
               <Route path="/savedArbs" element={<SavedArbs></SavedArbs>} />
-
             </Routes>
           </div>
           <Footer />
