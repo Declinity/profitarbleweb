@@ -13,20 +13,20 @@ const Guides = () => {
             <h1>Guides</h1>
             <div className="segment" onClick={() => redirectToGuide('/guides/introduction')}>
                 <div className="text-section">
-                    <h2>Never lose!</h2>
-                    <p>Imagine placing £5 on two different bookmakers...</p>
+                    <h2>Introduction guide</h2>
+                    <p>Learn the basics of arbitrage betting, and most importantly, how YOU can profit from it!</p>
                 </div>
             </div>
             <div className="segment" onClick={() => redirectToGuide('/guides/players')}>
                 <div className="text-section">
-                    <h2>Never lose!</h2>
-                    <p>Imagine placing £5 on two different bookmakers...</p>
+                    <h2>Player guide</h2>
+                    <p>Learn how to easily manage player bets and arb like a professional!</p>
                 </div>
             </div>
             <div className="segment" onClick={() => redirectToGuide('/guides/cards')}>
                 <div className="text-section">
-                    <h2>Never lose!</h2>
-                    <p>Imagine placing £5 on two different bookmakers...</p>
+                    <h2>Card guide</h2>
+                    <p>Learn how you should manage card bets!</p>
                 </div>
             </div>
         </div>

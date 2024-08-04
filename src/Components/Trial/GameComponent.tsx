@@ -29,10 +29,10 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
         amountOnOther: '---'
     });
     const handleNavigate2 = () => {
-        navigate('/guides/guide3');
+        navigate('/guides/cards');
     };
     const handleNavigate = () => {
-        navigate('/guides/guide2');
+        navigate('/guides/players');
     };
     const handleValueClick = (value) => {
         if (value === "Total Cards") {
@@ -328,7 +328,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                         <div className="overlay">
                             <div className="popup">
                                 <p className="popup-text" onClick={handleNavigate}>Read Guide</p>
-                                <button onClick={() => setShowPopup(false)}>OK</button>
+                                <button onClick={() => setShowPopupPlayer(false)}>OK</button>
                             </div>
                         </div>
                     )}
