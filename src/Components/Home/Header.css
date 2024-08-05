@@ -12,6 +12,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1; /* Ensure header has a lower z-index than the logo */
+
 }
 
 .buttons-container {
@@ -48,6 +50,8 @@
   /* 70% of the header's height */
   width: auto;
   /* Maintain aspect ratio */
+  z-index: 2; /* Ensure logo has a higher z-index */
+
 }
 
 * {

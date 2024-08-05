@@ -26,7 +26,7 @@ const Header = () => {
           <i className="fa-solid fa-comments-dollar"></i> Pricing
         </button>
       </div>
-      <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} onClick={() => navigate('/')} alt="Logo" className="logo" />
       <div className="buttons-container right-buttons">
         {username ? (
           <>
@@ -54,6 +54,9 @@ const Header = () => {
         </button>
         {dropdownOpen && (
           <div className="dropdown-menu">
+            <button className="dropdown-item" onClick={() => navigate('/')}>
+              <i className="fa-solid fa-house"></i> Home
+            </button>
             <button className="dropdown-item" onClick={() => navigate('/guides')}>
               <i className="fa fa-dice"></i> Guides
             </button>
