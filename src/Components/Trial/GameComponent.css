@@ -128,7 +128,10 @@
     border: 1px solid #87ceeb;
     border-radius: 6px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure the input takes the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
 
 .overlay-content-edit strong {
     color: #0073e6;
