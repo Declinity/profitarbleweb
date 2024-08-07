@@ -3,7 +3,7 @@ import React from 'react';
 import './Explain.css'; // Ensure this is the correct path to your CSS file
 import scales from "../../Images/scales.png";
 import ukmap from "../../Images/ukmap.png";
-
+import lock from "../../Images/lock.png"
 
 const Explain = () => {
   return (
@@ -16,7 +16,7 @@ const Explain = () => {
             <h2>Risk-free Income!</h2>
             <p className='widthtest'>With our software, you'll be able to lock in weekly profits with minimal time and effort. Want to learn how? Check out our detailed guides!</p>
           </div>
-          <img src={ukmap} alt="Placeholder" className="image" />
+          <img src={lock} alt="Placeholder" className="image" />
         </div>
         <div className="segment">
           <img src={scales} alt="Placeholder" className="image" />

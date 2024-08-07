@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import UserContext from '../Context/UserContext';
 import './Settings.css';
+import { useNavigate } from 'react-router-dom';
 
 const Settings = () => {
+    const navigate = useNavigate()
     // @ts-ignore
     const { username, authChecked, setUsername } = useContext(UserContext);
     // @ts-ignore
@@ -102,6 +104,9 @@ const Settings = () => {
                         )}
                         {proVersionActive && (
                             <button className="settings-button cancel-button" onClick={handleCancelProVersion}>Unsubscribe</button>
+                        )}
+                        {proVersionAccess && (
+                            <button className="settings-button logout-button" onClick={() => navigate("/savedArbs")}>View your arbs</button>
                         )}
                     </div>
                 ) : (
