@@ -109,10 +109,11 @@ const Settings = () => {
                             <button className="settings-button cancel-button" onClick={() => navigate("/savedArbs")}>View your arbs</button>
                         )}
                     </div>
-                ) : (
+                ) : (<>
                     <p>Loading trial status...</p>
+                    <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
+                    </>
                 )}
-                <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
             </div>
         </div>
     );
