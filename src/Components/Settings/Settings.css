@@ -38,6 +38,12 @@
     color: #333;
 }
 
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .settings-button {
     padding: 10px 20px;
     margin-top: 20px;
@@ -47,7 +53,11 @@
     font-size: 16px;
     color: white;
     transition: background-color 0.3s;
+    display: block; /* Ensure the button takes the full width */
+    width: 100%; /* Adjust width to make it consistent */
+    max-width: 300px; /* Optionally set a max width for the buttons */
 }
+
 
 .cancel-button {
     background-color: #0073e6;

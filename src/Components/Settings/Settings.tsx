@@ -106,7 +106,7 @@ const Settings = () => {
                             <button className="settings-button cancel-button" onClick={handleCancelProVersion}>Unsubscribe</button>
                         )}
                         {(proVersionAccess || proVersionActive) && (
-                            <button className="settings-button logout-button" onClick={() => navigate("/savedArbs")}>View your arbs</button>
+                            <button className="settings-button cancel-button" onClick={() => navigate("/savedArbs")}>View your arbs</button>
                         )}
                     </div>
                 ) : (
