@@ -102,16 +102,16 @@ const Settings = () => {
                         {freeTrialActive && (
                             <p>Your free trial will expire on: {formatDate(trialStatus.freeTrialExpDate)}</p>
                         )}
-                        {proVersionActive && (
-                            <button className="settings-button cancel-button" onClick={handleCancelProVersion}>Unsubscribe</button>
-                        )}
                         {(proVersionAccess || proVersionActive) && (
                             <button className="settings-button cancel-button" onClick={() => navigate("/savedArbs")}>View your arbs</button>
+                        )}
+                        <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
+                        {proVersionActive && (
+                            <button className="settings-button cancel-button" onClick={handleCancelProVersion}>Unsubscribe</button>
                         )}
                     </div>
                 ) : (<>
                     <p>Loading trial status...</p>
-                    <button className="settings-button logout-button" onClick={handleLogout}>Logout</button>
                     </>
                 )}
             </div>
