@@ -504,8 +504,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Odds 1:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="odds1"
                                     value={editableOdds.odds1}
                                     onChange={handleOddsChange}
@@ -516,8 +515,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Odds 2:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="odds2"
                                     value={editableOdds.odds2}
                                     onChange={handleOddsChange}
@@ -528,8 +526,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Total Stake:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="totalStake"
                                     value={totalStake}
                                     onChange={handleTotalStakeChange}
@@ -540,8 +537,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Stake 1:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="stake1"
                                     value={stakes.stake1}
                                     onChange={handleStakeChange}
@@ -552,8 +548,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Stake 2:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="stake2"
                                     value={stakes.stake2}
                                     onChange={handleStakeChange}
