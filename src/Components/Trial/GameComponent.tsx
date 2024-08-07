@@ -504,8 +504,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                             <label>
                                 Odds 1:
                                 <input
-                                    type="number"
-                                    step="any"
+                                    type="text"
                                     name="odds1"
                                     value={editableOdds.odds1}
                                     onChange={handleOddsChange}
