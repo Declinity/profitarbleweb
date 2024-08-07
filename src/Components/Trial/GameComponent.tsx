@@ -319,7 +319,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                     {showPopup && (
                         <div className="overlay">
                             <div className="popup">
-                                <p>WARNING: Make sure you understand player arbs before placing. It's very simple, just follow </p><p className="popup-text" onClick={handleNavigate2}>this guide!</p>
+                                <p>WARNING: Make sure you understand player arbs before placing. It's very simple, just follow <a className="popup-text" href='/guides/players'>this guide!</a></p>
                                 <button onClick={() => setShowPopup(false)}>OK</button>
                             </div>
                         </div>
