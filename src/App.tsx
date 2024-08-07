@@ -16,6 +16,7 @@ import Guide1 from './Components/Guides/Guide1.js';
 import SavedArbs from './Components/UserArbs/SavedArbs.js';
 import Guide2 from './Components/Guides/Guide2.js';
 import Guide3 from './Components/Guides/Guide3.js';
+import ToS from './Components/Guides/ToS.js';
 
 function App() {
   const [username, setUsername] = useState();
@@ -66,6 +67,7 @@ function App() {
               <Route path="/guides/players" element={<Guide2 />} />
               <Route path="/guides/introduction" element={<Guide3 />} />
               <Route path="/savedArbs" element={<SavedArbs></SavedArbs>} />
+              <Route path="/termsandconditions" element={<ToS></ToS>} />
             </Routes>
           </div>
           <Footer />

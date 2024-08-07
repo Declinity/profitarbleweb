@@ -319,7 +319,7 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                     {showPopup && (
                         <div className="overlay">
                             <div className="popup">
-                                <p>WARNING: Make sure you understand player arbs before placing. It's very simple, just follow <a className="popup-text" href='/guides/players'>this guide!</a></p>
+                                <p>WARNING: Make sure you understand card arbs before placing and have read <a className="popup-text" href='/guides/cards'>this guide!</a></p>
                                 <button onClick={() => setShowPopup(false)}>OK</button>
                             </div>
                         </div>
@@ -327,8 +327,8 @@ const GameComponent = ({ gameName, gameData, links, showSaveButton }) => {
                     {showPopupPlayer && (
                         <div className="overlay">
                             <div className="popup">
-                                <p className="popup-text" onClick={handleNavigate}>Read Guide</p>
-                                <button onClick={() => setShowPopupPlayer(false)}>OK</button>
+                            <p>WARNING: Player names are checked by surname - this leads to rare mismatches between players with the same surname. Make sure you're betting on the same player! Also, make sure you understand player arbs before placing and have read <a className="popup-text" href='/guides/players'>this guide!</a></p>
+                            <button onClick={() => setShowPopupPlayer(false)}>OK</button>
                             </div>
                         </div>
                     )}
